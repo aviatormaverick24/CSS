@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties</title>
+    <style>
+        *{margin:0;
+        padding:0;
+        font-size: 15px
+    }
+        .box{
+            height: 100px;
+            width: 100px;
+            margin: 5px;
+            background-color: olivedrab;
+
+            display: inline-block;
+        }
+        #first{
+            background-color: aliceblue;
+            height: 100px;
+            width: 200px;
+            font-size: 10px;
+        }
+        #second{
+            background-color: coral;
+            width: 50%;/*50% of parent element(used for responsive websites)*/
+            font-size: 1.5em;/*relative scaling to parent element(1.5times the parent's font size)*/
+            /*font-size: 1.5rem; --> gives font size relative to root element (here body text)*/
+        }
+        #box1{
+            position: static; /*default position*/
+        }
+        #box2{
+            position: relative;
+        }
+        #box4{
+            position: absolute;
+
+        }
+        #box3{
+            position: fixed;
+            background-color: lightgreen;
+            width: 30vw;/*30% of viewport width*/
+            height: 20vh;/*20% of viewport height*/
+        }
+
+    </style>
+</head>
+<body>
+    Body Text
+    <div id="box1" class="box">Box1(static)</div>
+    <div id="box2" class="box">Box2(relative)</div>
+    <div id="box3" class="box">Box3(fixed)</div>
+    <div id="box4" class="box">Box4(absolute)</div>
+    <div id="first">First div
+        <div id="second">
+            Second div
+        </div>
+
+
+    </div>
+</body>
+</html>
